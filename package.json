@@ -1,0 +1,26 @@
+{
+  "name": "esbuild-reactjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "buildDev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.0",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.11.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
