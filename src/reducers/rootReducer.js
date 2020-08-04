@@ -1,23 +1,17 @@
 import { useReducer } from 'react';
-import { horseReducer, horseInitialState } from './horseReducer';
-import { boxingReducer, boxingInitialState } from './boxingReducer';
-import { baseballReducer, baseballInitialState } from './baseballReducer';
+import { apiReducer, apiInitialState } from './apiReducer';
 import { loadingReducer, loadingInitialState } from './loadingReducer';
 
 function rootReducer() {
-  const [ horse, horseDispatch ] = useReducer(horseReducer, horseInitialState);
-  const [ boxing, boxingDispatch ] = useReducer(boxingReducer, boxingInitialState);
-  const [ baseball, baseballDispatch ] = useReducer(baseballReducer, baseballInitialState);
   const [ loading, loadingDispatch ] = useReducer(loadingReducer, loadingInitialState);
+  const [ apiState, apiDispatch ] = useReducer(apiReducer, apiInitialState);
 
-  const combinedDispatches = [ horseDispatch, boxingDispatch, baseballDispatch, loadingDispatch ];
+  const combinedDispatches = [ loadingDispatch, apiDispatch ];
 
   // combined state
   return {
     state: {
-      horse,
-      boxing,
-      baseball
+      apiState
     },
     loading,
     dispatch: payload => combinedDispatches.forEach(d => d(payload))

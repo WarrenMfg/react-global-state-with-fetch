@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Header({ event }) {
-  return <h2>{event}</h2>;
+function Header() {
+  return <h1>Tronald Dump</h1>;
 }
 
 export default Header;
