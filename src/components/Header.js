@@ -1,6 +1,7 @@
 import React from 'react';
 
 function Header() {
+  console.log('Header')
   return (
     <>
       <h1>Tronald Dump</h1>
@@ -9,4 +10,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default React.memo(Header);

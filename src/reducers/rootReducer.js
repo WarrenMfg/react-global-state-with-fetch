@@ -10,9 +10,7 @@ function rootReducer() {
 
   // combined state
   return {
-    state: {
-      apiState
-    },
+    ...apiState,
     loading,
     dispatch: payload => combinedDispatches.forEach(d => d(payload))
   };

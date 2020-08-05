@@ -2,7 +2,7 @@ import React from 'react';
 import { fetchTopic } from '../actions/fetch';
 import withGlobalStore from './withGlobalStore';
 
-function SelectTags({ globalStore: { state: { apiState: { tags } }, dispatch } }) {
+function SelectTags({ globalStore: { tags, dispatch } }) {
   const handleSelectChange = e => {
     if (e.target.value) {
       fetchTopic(dispatch, e.target.value);

@@ -2,7 +2,7 @@ import React from 'react';
 import twitter from '../twitter.png';
 import withGlobalStore from './withGlobalStore';
 
-function DisplayQuotes({ globalStore: { state: { apiState: { quotes } } } }) {
+function DisplayQuotes({ globalStore: { quotes } }) {
   return (
     <div className='quotes'>
       {quotes.map((quote, i) => {

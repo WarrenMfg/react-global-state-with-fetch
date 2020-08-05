@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { fetchMeme } from '../actions/fetch';
 import withGlobalStore from './withGlobalStore';
 
-function RandomMeme({ globalStore: { state: { apiState: { quotes, meme } }, dispatch } }) {
+function RandomMeme({ globalStore: { quotes, meme, dispatch } }) {
   useEffect(
     () => {
       if (!quotes.length) {
